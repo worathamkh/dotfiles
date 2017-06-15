@@ -1,0 +1,11 @@
+#!/bin/bash
+# Copy but backup first
+
+if [ -f "$2" ] || [ -d "$2" ]; then
+    i="0"
+    while [ -f "$2.bak$i" ] || [ -d "$2.bak$i" ]; do
+        i=$[$i+1]
+    done
+    mv "$2" "$2.bak$i"
+fi
+cp "$1" "$2"
