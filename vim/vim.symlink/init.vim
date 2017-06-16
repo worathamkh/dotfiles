@@ -1,1 +1,0 @@
-/Users/aniketpant/.vimrc
