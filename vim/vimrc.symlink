@@ -16,6 +16,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plugin 'groenewege/vim-less', { 'for': 'less' }
@@ -78,12 +80,12 @@ set cursorline
 " set background theme
 set background=light
 " set tabs to have 4 spaces
-set ts=4
+set ts=2
 set autoindent
 " expand tabs into spaces
 set expandtab
 " when >> or << shift by 4 spaces
-set shiftwidth=4
+set shiftwidth=2
 " show matching pair brackets
 set showmatch
 " set colorscheme
@@ -110,3 +112,5 @@ let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext'
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+" Enable indent guides on startup
+let g:indent_guides_enable_on_vim_startup = 0
