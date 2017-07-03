@@ -20,6 +20,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plugin 'groenewege/vim-less', { 'for': 'less' }
 Plugin 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 Plugin '2072/php-indenting-for-vim', { 'for': 'php' }
 Plugin 'fatih/vim-go', { 'for': 'go' }
 Plugin 'python-mode/python-mode', { 'for': 'python' }
@@ -57,7 +58,7 @@ set lazyredraw
 
 " Reload files when changed on disk, i.e. via `git checkout`
 set autoread
-"
+
 " yank and paste with the system clipboard
 set clipboard=unnamed
 
@@ -86,6 +87,9 @@ set expandtab
 set shiftwidth=4
 " show matching pair brackets
 set showmatch
+" disable auto yank
+set clipboard-=autoselect
+set guioptions-=a
 " set colorscheme
 color seagull
 
@@ -110,3 +114,17 @@ let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext'
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
