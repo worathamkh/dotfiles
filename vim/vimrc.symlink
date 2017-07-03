@@ -16,6 +16,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plugin 'groenewege/vim-less', { 'for': 'less' }
@@ -79,12 +81,12 @@ set cursorline
 " set background theme
 set background=light
 " set tabs to have 4 spaces
-set ts=4
+set ts=2
 set autoindent
 " expand tabs into spaces
 set expandtab
 " when >> or << shift by 4 spaces
-set shiftwidth=4
+set shiftwidth=2
 " show matching pair brackets
 set showmatch
 " disable auto yank
@@ -114,6 +116,7 @@ let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext'
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+<<<<<<< HEAD
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
@@ -128,3 +131,7 @@ let g:NERDCommentEmptyLines = 1
 
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+=======
+" Enable indent guides on startup
+let g:indent_guides_enable_on_vim_startup = 0
+>>>>>>> 6644959999ac1ad924431b3c755f9258d6ac24a8
