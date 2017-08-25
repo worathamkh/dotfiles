@@ -21,12 +21,12 @@ Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plugin 'groenewege/vim-less', { 'for': 'less' }
-Plugin 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 Plugin '2072/php-indenting-for-vim', { 'for': 'php' }
 Plugin 'fatih/vim-go', { 'for': 'go' }
 Plugin 'python-mode/python-mode', { 'for': 'python' }
 Plugin 'mmalecki/vim-node.js', { 'for': 'javascript' }
+Plugin 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
 
 " seabird is a Vim and terminal theme based on hue 204
 Plugin 'nightsense/seabird'
@@ -83,8 +83,8 @@ set background=light
 " set tabs to have 4 spaces
 set ts=2
 set autoindent
-" expand tabs into spaces
-set expandtab
+" DON'T expand tabs into spaces
+set noexpandtab
 " when >> or << shift by 4 spaces
 set shiftwidth=2
 " show matching pair brackets
@@ -106,6 +106,8 @@ set laststatus=2
 set showtabline=2 
 " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set noshowmode 
+" Hilight search
+set hlsearch
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
@@ -116,7 +118,6 @@ let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/', 'syntax': 'markdown', 'ext'
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
-<<<<<<< HEAD
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
@@ -131,7 +132,6 @@ let g:NERDCommentEmptyLines = 1
 
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-=======
+"
 " Enable indent guides on startup
-let g:indent_guides_enable_on_vim_startup = 0
->>>>>>> 6644959999ac1ad924431b3c755f9258d6ac24a8
+let g:indent_guides_enable_on_vim_startup = 1
