@@ -27,6 +27,7 @@ Plugin 'python-mode/python-mode', { 'for': 'python' }
 Plugin 'mmalecki/vim-node.js', { 'for': 'javascript' }
 Plugin 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plugin 'mxw/vim-jsx', { 'for': 'javascript' }
+Plugin 'posva/vim-vue', { 'for': 'vue' }
 
 " seabird is a Vim and terminal theme based on hue 204
 Plugin 'nightsense/seabird'
@@ -80,12 +81,13 @@ set ruler
 set cursorline
 " set background theme
 set background=light
-" set tabs to have 4 spaces
+" set tabs to have 2 spaces
 set ts=2
+" auto indent
 set autoindent
-" DON'T expand tabs into spaces
+" DO NOT expand tabs into spaces
 set noexpandtab
-" when >> or << shift by 4 spaces
+" when >> or << shift by 2 spaces
 set shiftwidth=2
 " show matching pair brackets
 set showmatch
@@ -103,7 +105,7 @@ python3 del powerline_setup
 " Always show statusline
 set laststatus=2
 " Always display the tabline, even if there is only one tab
-set showtabline=2 
+set showtabline=2
 " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set noshowmode 
 " Hilight search
@@ -135,3 +137,10 @@ let g:NERDTrimTrailingWhitespace = 1
 "
 " Enable indent guides on startup
 let g:indent_guides_enable_on_vim_startup = 1
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.git|\.hg|\.svn|node_modules)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
